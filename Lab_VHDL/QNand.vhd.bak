@@ -1,0 +1,15 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+
+ENTITY QNand is 
+PORT(
+	E1, E2 : IN STD_LOGIC;
+	S1 : OUT STD_LOGIC
+);
+END QNand;
+
+ARCHITECTURE behavior of QNand is
+BEGIN
+	S1 <= E1 NAND E2;
+	
+END behavior;

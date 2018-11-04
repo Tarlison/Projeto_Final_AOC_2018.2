@@ -1,0 +1,15 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+
+ENTITY QOr is 
+PORT(
+	pa, pb : IN STD_LOGIC;
+	pout : OUT STD_LOGIC
+);
+END QOr;
+
+ARCHITECTURE behavior of QOr is
+BEGIN
+	pout <= pa or pb;
+	
+END behavior;

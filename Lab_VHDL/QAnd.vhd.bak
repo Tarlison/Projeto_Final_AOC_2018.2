@@ -1,0 +1,15 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+
+ENTITY QAnd is 
+PORT(
+	pa, pb : IN STD_LOGIC;
+	pout : OUT STD_LOGIC
+);
+END QAnd;
+
+ARCHITECTURE behavior of Qand is
+BEGIN
+	pout <= pa and pb;
+	
+END behavior;

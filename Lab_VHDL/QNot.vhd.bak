@@ -1,0 +1,15 @@
+Library ieee;
+use ieee.std_logic_1164.all;
+
+ENTITY QNot is 
+PORT(
+	A: IN STD_LOGIC;
+	S : OUT STD_LOGIC
+);
+END QNOt;
+
+ARCHITECTURE behavior of QNot is
+BEGIN
+	S <= NOT A;
+	
+END behavior;

@@ -1,0 +1,15 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY  Multiplexador4x1 IS
+	PORT(  A, B, C, D, S: IN bit;
+			SAIDA : OUT bit
+	)
+END ENTITY Multiplexador4x1;
+
+ARCHITECTURE Multiplexador4x1 OF Multiplexador4x1 IS
+BEGIN 
+	SAIDA <= (A AND S) or (B AND NOT(S));
+		
+		
+END Multiplexador4x1;

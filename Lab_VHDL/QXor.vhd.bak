@@ -1,0 +1,11 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+
+ENTITY QXor is
+PORT (
+	A, B: IN STD_LOGIC;
+	RESULTADO: OUT STD_LOGIC;
+)
+END QXor;
+
+ARCHITECTURE QXor of QXor is
