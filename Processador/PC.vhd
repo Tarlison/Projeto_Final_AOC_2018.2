@@ -1,0 +1,26 @@
+LIBRARY ieee; 
+USE ieee.std_logic_1164.all; USE ieee.std_logic_arith.all;
+USE ieee.numeric_std.all; USE ieee.std_logic_unsigned.all;
+
+ENTITY PC IS
+	PORT(
+		ATIVO: IN STD_LOGIC;
+		CLOCK: IN STD_LOGIC;
+		ENTRADAPC: IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+		SAIDAPC: OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+		
+	);
+	
+END PC;
+
+ARCHITECTURE BEHAVIOR OF PC IS
+BEGIN
+	PROCESS(CLOCK)
+		BEGIN
+			IF (CLOCK = '1' AND CLOCK'EVENT) THEN
+				IF (ATIVO = '1') THEN
+					SAIDAPC <= ENTRADAPC;
+				END IF;
+			END IF;
+	END PROCESS;
+END BEHAVIOR;
