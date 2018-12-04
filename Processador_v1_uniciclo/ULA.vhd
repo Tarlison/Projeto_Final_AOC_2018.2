@@ -36,7 +36,6 @@ Architecture behavior of ULA is
 		
 		for i in 7 downto 0 Loop
 	
-	
 			if   (Prod(0) = '0' and C = '1') then
 				
 				C:= Prod(0);
@@ -59,11 +58,25 @@ Architecture behavior of ULA is
 	
 	End Booth;
 	
+	
+	
+	Component UlaFloat IS
+		PORT
+		(	
+			OP: IN STD_LOGIC_VECTOR(6 DOWNTO 0);
+			EF1, EF2 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+			RESULTADO: OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+		
+		);
+	END Component;
+	
+	Signal saidaFloat: std_logic_vector(15 downto 0);
 	Signal Splitter: std_logic_vector(15 downto 0);
 	
 	begin
+	opFloat: UlaFloat port map(Controle_ULA, EntradaA, EntradaB, saidaFloat);
 						 
-	process(Controle_ULA,EntradaA, EntradaB)
+	process(Controle_ULA,EntradaA, EntradaB,saidaFloat)
 		begin
 			 case Controle_ULA is
 				  when "0000000" => Splitter <= EntradaA  +   EntradaB;
@@ -71,6 +84,8 @@ Architecture behavior of ULA is
 				  when "0000010" => Splitter <= Booth(EntradaA(7 downto 0),EntradaB(7 downto 0));
 				  when "0000011" => Splitter <= EntradaA  and EntradaB ;
 				  when "0000100" => Splitter <= EntradaA  or EntradaB ;
+				  when "1111000" => Splitter <= saidaFloat;
+				  when "1111001" => Splitter <= saidaFloat;
 				  when others    => Splitter <= "0000000000000000";
 			 end case;
 			 

@@ -27,9 +27,9 @@ BEGIN
 	listaInstrucoes(1) := "0000010100001001";-- sub $s2,$s4,$s1
 	listaInstrucoes(2) := "0000011010001010";-- mult $s3,$s2,$s1
 	listaInstrucoes(3) := "0000101100110011";-- and $s5,$s4,$6
-	listaInstrucoes(4) := "0001100000000001";-- lw $s0,1($s4); 
-	--listaInstrucoes(6) := "0001000000000101";
-	--listaInstrucoes(7) := "0001100000000000";
+	listaInstrucoes(4) := "0001100000000001";-- lw $s0,1($s4);	
+	listaInstrucoes(6) := "1111000000000000";-- add.d $s2,$s3,$s4
+	listaInstrucoes(7) := "1111000000000001";-- sub.d $s5,$s1,$s4
 END PROCEDURE;
 
 BEGIN
@@ -88,14 +88,6 @@ BEGIN
 				op <= ROM(conv_integer(entrada))(15 DOWNTO 12);
 				jump <= ROM(conv_integer(entrada))(11 DOWNTO 0);
 			
---			ELSE
---			op <= "ZZZZ"; -- SÓ PODE TER 4
---			rs <= "ZZZ";
---			rt <= "ZZZ";
---			rd <= "ZZZ";
---			funct <= "ZZZ";
---			tipoi <= "ZZZZZZ";
---			jump <= "ZZZZZZZZZZZZ";
 			END IF;
 		END IF;
 	END PROCESS;

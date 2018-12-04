@@ -320,7 +320,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "Instruction_to_extensorDeSinal_outWaveform[1]",
+					"strict" : false
+				},
+				{
 					"name" : "Instruction_to_extensorDeSinal_outWaveform[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Instruction_to_extensorDeSinal_outWaveform[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Instruction_to_extensorDeSinal_outWaveform[5]",
 					"strict" : false
 				},
 				{

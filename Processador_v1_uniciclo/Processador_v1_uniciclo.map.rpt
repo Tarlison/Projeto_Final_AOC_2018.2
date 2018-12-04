@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processador_v1_uniciclo
-Tue Dec 04 08:20:14 2018
+Tue Dec 04 14:57:42 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -20,7 +20,7 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
  12. General Register Statistics
  13. Registers Packed Into Inferred Megafunctions
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for memram:G17|altsyncram:RAM_rtl_0|altsyncram_jne1:auto_generated
+ 15. Source assignments for memram:G17|altsyncram:RAM_rtl_0|altsyncram_v1v1:auto_generated
  16. Parameter Settings for Inferred Entity Instance: memram:G17|altsyncram:RAM_rtl_0
  17. altsyncram Parameter Settings by Entity Instance
  18. Post-Synthesis Netlist Statistics for Top Partition
@@ -51,7 +51,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Dec 04 08:20:14 2018       ;
+; Analysis & Synthesis Status     ; Successful - Tue Dec 04 14:57:42 2018       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; Processador_v1_uniciclo                     ;
 ; Top-level Entity Name           ; DataPath                                    ;
@@ -182,6 +182,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                        ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                ; Library ;
 +---------------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
+; UlaFloat.vhd                                            ; yes             ; User VHDL File                                        ; C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UlaFloat.vhd                                            ;         ;
 ; UnidadedeControle.vhd                                   ; yes             ; User VHDL File                                        ; C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UnidadedeControle.vhd                                   ;         ;
 ; ULA.vhd                                                 ; yes             ; User VHDL File                                        ; C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/ULA.vhd                                                 ;         ;
 ; SomadorPC.vhd                                           ; yes             ; User VHDL File                                        ; C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/SomadorPC.vhd                                           ;         ;
@@ -207,38 +208,38 @@ refer to the applicable agreement for further details.
 ; altrom.inc                                              ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altrom.inc                                           ;         ;
 ; altram.inc                                              ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altram.inc                                           ;         ;
 ; altdpram.inc                                            ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altdpram.inc                                         ;         ;
-; db/altsyncram_jne1.tdf                                  ; yes             ; Auto-Generated Megafunction                           ; C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/db/altsyncram_jne1.tdf                                  ;         ;
-; db/processador_v1_uniciclo.ram0_memram_e416e912.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/db/processador_v1_uniciclo.ram0_memram_e416e912.hdl.mif ;         ;
+; db/altsyncram_v1v1.tdf                                  ; yes             ; Auto-Generated Megafunction                           ; C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/db/altsyncram_v1v1.tdf                                  ;         ;
+; db/Processador_v1_uniciclo.ram0_memram_e416e912.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/db/Processador_v1_uniciclo.ram0_memram_e416e912.hdl.mif ;         ;
 +---------------------------------------------------------+-----------------+-------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                       ;
-+---------------------------------------------+---------------------+
-; Resource                                    ; Usage               ;
-+---------------------------------------------+---------------------+
-; Estimate of Logic utilization (ALMs needed) ; 241                 ;
-;                                             ;                     ;
-; Combinational ALUT usage for logic          ; 400                 ;
-;     -- 7 input functions                    ; 6                   ;
-;     -- 6 input functions                    ; 74                  ;
-;     -- 5 input functions                    ; 159                 ;
-;     -- 4 input functions                    ; 61                  ;
-;     -- <=3 input functions                  ; 100                 ;
-;                                             ;                     ;
-; Dedicated logic registers                   ; 32                  ;
-;                                             ;                     ;
-; I/O pins                                    ; 185                 ;
-; Total MLAB memory bits                      ; 0                   ;
-; Total block memory bits                     ; 16016               ;
-;                                             ;                     ;
-; Total DSP Blocks                            ; 0                   ;
-;                                             ;                     ;
-; Maximum fan-out node                        ; Clock_Sistema~input ;
-; Maximum fan-out                             ; 104                 ;
-; Total fan-out                               ; 2445                ;
-; Average fan-out                             ; 2.99                ;
-+---------------------------------------------+---------------------+
++-----------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                           ;
++---------------------------------------------+-------------------------+
+; Resource                                    ; Usage                   ;
++---------------------------------------------+-------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 237                     ;
+;                                             ;                         ;
+; Combinational ALUT usage for logic          ; 408                     ;
+;     -- 7 input functions                    ; 8                       ;
+;     -- 6 input functions                    ; 55                      ;
+;     -- 5 input functions                    ; 181                     ;
+;     -- 4 input functions                    ; 59                      ;
+;     -- <=3 input functions                  ; 105                     ;
+;                                             ;                         ;
+; Dedicated logic registers                   ; 32                      ;
+;                                             ;                         ;
+; I/O pins                                    ; 185                     ;
+; Total MLAB memory bits                      ; 0                       ;
+; Total block memory bits                     ; 16016                   ;
+;                                             ;                         ;
+; Total DSP Blocks                            ; 0                       ;
+;                                             ;                         ;
+; Maximum fan-out node                        ; memoria_ROM2:G4|op[0]~0 ;
+; Maximum fan-out                             ; 100                     ;
+; Total fan-out                               ; 2483                    ;
+; Average fan-out                             ; 3.01                    ;
++---------------------------------------------+-------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -246,29 +247,29 @@ refer to the applicable agreement for further details.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------+-------------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                      ; Entity Name             ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------+-------------------------+--------------+
-; |DataPath                                 ; 400 (0)             ; 32 (0)                    ; 16016             ; 0          ; 185  ; 0            ; |DataPath                                                                ; DataPath                ; work         ;
+; |DataPath                                 ; 408 (0)             ; 32 (0)                    ; 16016             ; 0          ; 185  ; 0            ; |DataPath                                                                ; DataPath                ; work         ;
 ;    |BancoRegistradores:G7|                ; 41 (41)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DataPath|BancoRegistradores:G7                                          ; BancoRegistradores      ; work         ;
-;    |Multiplexador2x1:G6|                  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DataPath|Multiplexador2x1:G6                                            ; Multiplexador2x1        ; work         ;
-;    |Multiplexador2x1_16bits:G14|          ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DataPath|Multiplexador2x1_16bits:G14                                    ; Multiplexador2x1_16bits ; work         ;
+;    |Multiplexador2x1:G6|                  ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DataPath|Multiplexador2x1:G6                                            ; Multiplexador2x1        ; work         ;
+;    |Multiplexador2x1_16bits:G14|          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DataPath|Multiplexador2x1_16bits:G14                                    ; Multiplexador2x1_16bits ; work         ;
 ;    |Multiplexador2x1_16bits:G18|          ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DataPath|Multiplexador2x1_16bits:G18                                    ; Multiplexador2x1_16bits ; work         ;
 ;    |PC:G1|                                ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |DataPath|PC:G1                                                          ; PC                      ; work         ;
 ;    |SomadorPC:G2|                         ; 16 (16)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |DataPath|SomadorPC:G2                                                   ; SomadorPC               ; work         ;
-;    |ULA:G16|                              ; 289 (289)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DataPath|ULA:G16                                                        ; ULA                     ; work         ;
-;    |memoria_ROM2:G4|                      ; 29 (29)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DataPath|memoria_ROM2:G4                                                ; memoria_ROM2            ; work         ;
+;    |ULA:G16|                              ; 293 (293)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DataPath|ULA:G16                                                        ; ULA                     ; work         ;
+;    |memoria_ROM2:G4|                      ; 31 (31)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DataPath|memoria_ROM2:G4                                                ; memoria_ROM2            ; work         ;
 ;    |memram:G17|                           ; 0 (0)               ; 0 (0)                     ; 16016             ; 0          ; 0    ; 0            ; |DataPath|memram:G17                                                     ; memram                  ; work         ;
 ;       |altsyncram:RAM_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 16016             ; 0          ; 0    ; 0            ; |DataPath|memram:G17|altsyncram:RAM_rtl_0                                ; altsyncram              ; work         ;
-;          |altsyncram_jne1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 16016             ; 0          ; 0    ; 0            ; |DataPath|memram:G17|altsyncram:RAM_rtl_0|altsyncram_jne1:auto_generated ; altsyncram_jne1         ; work         ;
+;          |altsyncram_v1v1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 16016             ; 0          ; 0    ; 0            ; |DataPath|memram:G17|altsyncram:RAM_rtl_0|altsyncram_v1v1:auto_generated ; altsyncram_v1v1         ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------+-------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                      ;
-+---------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------------------------------------------------+
-; Name                                                                      ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                                                     ;
-+---------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------------------------------------------------+
-; memram:G17|altsyncram:RAM_rtl_0|altsyncram_jne1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 1001         ; 16           ; --           ; --           ; 16016 ; db/Processador_v1_uniciclo.ram0_memram_e416e912.hdl.mif ;
-+---------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+---------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                  ;
++---------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+---------------------------------------------------------+
+; Name                                                                      ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                                                     ;
++---------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+---------------------------------------------------------+
+; memram:G17|altsyncram:RAM_rtl_0|altsyncram_v1v1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 1001         ; 16           ; 1001         ; 16           ; 16016 ; db/Processador_v1_uniciclo.ram0_memram_e416e912.hdl.mif ;
++---------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+-------+---------------------------------------------------------+
 
 
 +-------------------------------------------------------------+
@@ -307,71 +308,71 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; ShiftEsquerda:G9|SAIDA[0,1]            ; Stuck at GND due to stuck port data_in ;
 ; Qsll:G3|resshift[0,1]                  ; Stuck at GND due to stuck port data_in ;
 ; Qsll:G3|resshift[8]                    ; Merged with Qsll:G3|resshift[4]        ;
+; Qsll:G3|resshift[5]                    ; Merged with Qsll:G3|resshift[12]       ;
 ; Qsll:G3|resshift[7]                    ; Merged with Qsll:G3|resshift[6]        ;
 ; ShiftEsquerda:G9|SAIDA[6..9,11..15]    ; Merged with ShiftEsquerda:G9|SAIDA[10] ;
 ; Qsll:G3|vet[8]                         ; Merged with Qsll:G3|vet[4]             ;
+; Qsll:G3|vet[5]                         ; Merged with Qsll:G3|vet[12]            ;
 ; Qsll:G3|vet[7]                         ; Merged with Qsll:G3|vet[6]             ;
 ; ShiftEsquerda:G9|AUX[6..9,11..15]      ; Merged with ShiftEsquerda:G9|AUX[10]   ;
-; Qsll:G3|vet[5]                         ; Merged with Qsll:G3|vet[12]            ;
-; Qsll:G3|resshift[5]                    ; Merged with Qsll:G3|resshift[12]       ;
 ; Qsll:G3|vet[4]                         ; Stuck at GND due to stuck port data_in ;
 ; Qsll:G3|resshift[4]                    ; Stuck at GND due to stuck port data_in ;
+; ShiftEsquerda:G9|AUX[4]                ; Stuck at GND due to stuck port data_in ;
+; ShiftEsquerda:G9|SAIDA[4]              ; Stuck at GND due to stuck port data_in ;
 ; Qsll:G3|vet[2,3,6,9..13]               ; Stuck at GND due to stuck port data_in ;
+; Qsll:G3|resshift[2,3,6,9..13]          ; Stuck at GND due to stuck port data_in ;
 ; Somadorde16bits:G10|SAIDA[2..15]       ; Lost fanout                            ;
 ; ShiftEsquerda:G9|SAIDA[10]             ; Lost fanout                            ;
 ; ShiftEsquerda:G9|AUX[10]               ; Lost fanout                            ;
 ; ShiftEsquerda:G9|SAIDA[5]              ; Lost fanout                            ;
 ; ShiftEsquerda:G9|AUX[5]                ; Lost fanout                            ;
-; ShiftEsquerda:G9|SAIDA[4]              ; Lost fanout                            ;
-; ShiftEsquerda:G9|AUX[4]                ; Lost fanout                            ;
 ; ShiftEsquerda:G9|SAIDA[3]              ; Lost fanout                            ;
 ; ShiftEsquerda:G9|AUX[3]                ; Lost fanout                            ;
 ; ShiftEsquerda:G9|SAIDA[2]              ; Lost fanout                            ;
 ; ShiftEsquerda:G9|AUX[2]                ; Lost fanout                            ;
 ; Somadorde16bits:G10|SAIDA[0,1]         ; Lost fanout                            ;
-; Qsll:G3|resshift[2,3,6,9..13]          ; Stuck at GND due to stuck port data_in ;
 ; Qsll:G3|resshift[14,15]                ; Lost fanout                            ;
 ; Total Number of Removed Registers = 78 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                 ;
-+-------------------------------+---------------------------+---------------------------------------------------------------------------------+
-; Register name                 ; Reason for Removal        ; Registers Removed due to This Register                                          ;
-+-------------------------------+---------------------------+---------------------------------------------------------------------------------+
-; Qsll:G3|vet[4]                ; Stuck at GND              ; Qsll:G3|resshift[4], Somadorde16bits:G10|SAIDA[8], Somadorde16bits:G10|SAIDA[4] ;
-;                               ; due to stuck port data_in ;                                                                                 ;
-; Qsll:G3|vet[0]                ; Stuck at GND              ; Qsll:G3|resshift[0], Somadorde16bits:G10|SAIDA[0]                               ;
-;                               ; due to stuck port data_in ;                                                                                 ;
-; Qsll:G3|vet[1]                ; Stuck at GND              ; Qsll:G3|resshift[1], Somadorde16bits:G10|SAIDA[1]                               ;
-;                               ; due to stuck port data_in ;                                                                                 ;
-; Somadorde16bits:G10|SAIDA[15] ; Lost Fanouts              ; ShiftEsquerda:G9|SAIDA[10], ShiftEsquerda:G9|AUX[10]                            ;
-; ShiftEsquerda:G9|AUX[0]       ; Stuck at GND              ; ShiftEsquerda:G9|SAIDA[0]                                                       ;
-;                               ; due to stuck port data_in ;                                                                                 ;
-; ShiftEsquerda:G9|AUX[1]       ; Stuck at GND              ; ShiftEsquerda:G9|SAIDA[1]                                                       ;
-;                               ; due to stuck port data_in ;                                                                                 ;
-; Qsll:G3|vet[2]                ; Stuck at GND              ; Qsll:G3|resshift[2]                                                             ;
-;                               ; due to stuck port data_in ;                                                                                 ;
-; Qsll:G3|vet[3]                ; Stuck at GND              ; Qsll:G3|resshift[3]                                                             ;
-;                               ; due to stuck port data_in ;                                                                                 ;
-; Qsll:G3|vet[6]                ; Stuck at GND              ; Qsll:G3|resshift[6]                                                             ;
-;                               ; due to stuck port data_in ;                                                                                 ;
-; Qsll:G3|vet[9]                ; Stuck at GND              ; Qsll:G3|resshift[9]                                                             ;
-;                               ; due to stuck port data_in ;                                                                                 ;
-; Qsll:G3|vet[10]               ; Stuck at GND              ; Qsll:G3|resshift[10]                                                            ;
-;                               ; due to stuck port data_in ;                                                                                 ;
-; Qsll:G3|vet[11]               ; Stuck at GND              ; Qsll:G3|resshift[11]                                                            ;
-;                               ; due to stuck port data_in ;                                                                                 ;
-; Qsll:G3|vet[12]               ; Stuck at GND              ; Qsll:G3|resshift[12]                                                            ;
-;                               ; due to stuck port data_in ;                                                                                 ;
-; Qsll:G3|vet[13]               ; Stuck at GND              ; Qsll:G3|resshift[13]                                                            ;
-;                               ; due to stuck port data_in ;                                                                                 ;
-; ShiftEsquerda:G9|SAIDA[5]     ; Lost Fanouts              ; ShiftEsquerda:G9|AUX[5]                                                         ;
-; ShiftEsquerda:G9|SAIDA[4]     ; Lost Fanouts              ; ShiftEsquerda:G9|AUX[4]                                                         ;
-; ShiftEsquerda:G9|SAIDA[3]     ; Lost Fanouts              ; ShiftEsquerda:G9|AUX[3]                                                         ;
-; ShiftEsquerda:G9|SAIDA[2]     ; Lost Fanouts              ; ShiftEsquerda:G9|AUX[2]                                                         ;
-+-------------------------------+---------------------------+---------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                               ;
++---------------------------+---------------------------+-----------------------------------------------------------------------------------+
+; Register name             ; Reason for Removal        ; Registers Removed due to This Register                                            ;
++---------------------------+---------------------------+-----------------------------------------------------------------------------------+
+; Qsll:G3|vet[4]            ; Stuck at GND              ; Qsll:G3|resshift[4], Somadorde16bits:G10|SAIDA[8], Somadorde16bits:G10|SAIDA[4]   ;
+;                           ; due to stuck port data_in ;                                                                                   ;
+; ShiftEsquerda:G9|AUX[4]   ; Stuck at GND              ; ShiftEsquerda:G9|SAIDA[4], ShiftEsquerda:G9|SAIDA[10], ShiftEsquerda:G9|AUX[10]   ;
+;                           ; due to stuck port data_in ;                                                                                   ;
+; Qsll:G3|vet[6]            ; Stuck at GND              ; Qsll:G3|resshift[6], Somadorde16bits:G10|SAIDA[7], Somadorde16bits:G10|SAIDA[6]   ;
+;                           ; due to stuck port data_in ;                                                                                   ;
+; Qsll:G3|vet[12]           ; Stuck at GND              ; Qsll:G3|resshift[12], Somadorde16bits:G10|SAIDA[12], Somadorde16bits:G10|SAIDA[5] ;
+;                           ; due to stuck port data_in ;                                                                                   ;
+; Qsll:G3|vet[0]            ; Stuck at GND              ; Qsll:G3|resshift[0], Somadorde16bits:G10|SAIDA[0]                                 ;
+;                           ; due to stuck port data_in ;                                                                                   ;
+; Qsll:G3|vet[1]            ; Stuck at GND              ; Qsll:G3|resshift[1], Somadorde16bits:G10|SAIDA[1]                                 ;
+;                           ; due to stuck port data_in ;                                                                                   ;
+; Qsll:G3|vet[2]            ; Stuck at GND              ; Qsll:G3|resshift[2], Somadorde16bits:G10|SAIDA[2]                                 ;
+;                           ; due to stuck port data_in ;                                                                                   ;
+; Qsll:G3|vet[3]            ; Stuck at GND              ; Qsll:G3|resshift[3], Somadorde16bits:G10|SAIDA[3]                                 ;
+;                           ; due to stuck port data_in ;                                                                                   ;
+; Qsll:G3|vet[9]            ; Stuck at GND              ; Qsll:G3|resshift[9], Somadorde16bits:G10|SAIDA[9]                                 ;
+;                           ; due to stuck port data_in ;                                                                                   ;
+; Qsll:G3|vet[10]           ; Stuck at GND              ; Qsll:G3|resshift[10], Somadorde16bits:G10|SAIDA[10]                               ;
+;                           ; due to stuck port data_in ;                                                                                   ;
+; Qsll:G3|vet[11]           ; Stuck at GND              ; Qsll:G3|resshift[11], Somadorde16bits:G10|SAIDA[11]                               ;
+;                           ; due to stuck port data_in ;                                                                                   ;
+; Qsll:G3|vet[13]           ; Stuck at GND              ; Qsll:G3|resshift[13], Somadorde16bits:G10|SAIDA[13]                               ;
+;                           ; due to stuck port data_in ;                                                                                   ;
+; ShiftEsquerda:G9|AUX[0]   ; Stuck at GND              ; ShiftEsquerda:G9|SAIDA[0]                                                         ;
+;                           ; due to stuck port data_in ;                                                                                   ;
+; ShiftEsquerda:G9|AUX[1]   ; Stuck at GND              ; ShiftEsquerda:G9|SAIDA[1]                                                         ;
+;                           ; due to stuck port data_in ;                                                                                   ;
+; ShiftEsquerda:G9|SAIDA[5] ; Lost Fanouts              ; ShiftEsquerda:G9|AUX[5]                                                           ;
+; ShiftEsquerda:G9|SAIDA[3] ; Lost Fanouts              ; ShiftEsquerda:G9|AUX[3]                                                           ;
+; ShiftEsquerda:G9|SAIDA[2] ; Lost Fanouts              ; ShiftEsquerda:G9|AUX[2]                                                           ;
++---------------------------+---------------------------+-----------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -398,31 +399,32 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +---------------------------+----------------------+------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |DataPath|Multiplexador2x1:G6|SAIDA[2]    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DataPath|BancoRegistradores:G7|Reg[6][5] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DataPath|BancoRegistradores:G7|Reg[0][1] ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DataPath|ULA:G16|Prod                    ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DataPath|ULA:G16|Prod                    ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DataPath|ULA:G16|Prod                    ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DataPath|ULA:G16|Prod                    ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DataPath|ULA:G16|Prod                    ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DataPath|ULA:G16|Prod                    ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |DataPath|memoria_ROM2:G4|rd[2]           ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |DataPath|memoria_ROM2:G4|tipoi[4]        ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |DataPath|ULA:G16|Mux1                    ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; No         ; |DataPath|BancoRegistradores:G7|Mux29     ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; No         ; |DataPath|BancoRegistradores:G7|Mux14     ;
-; 8:1                ; 7 bits    ; 35 LEs        ; 28 LEs               ; 7 LEs                  ; No         ; |DataPath|ULA:G16|Mux7                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |DataPath|Multiplexador2x1:G6|SAIDA[2]     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DataPath|BancoRegistradores:G7|Reg[6][12] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DataPath|BancoRegistradores:G7|Reg[0][4]  ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DataPath|ULA:G16|Prod                     ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DataPath|ULA:G16|Prod                     ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DataPath|ULA:G16|Prod                     ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DataPath|ULA:G16|Prod                     ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DataPath|ULA:G16|Prod                     ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DataPath|ULA:G16|Prod                     ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |DataPath|memoria_ROM2:G4|rs[0]            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |DataPath|memoria_ROM2:G4|funct[1]         ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |DataPath|memoria_ROM2:G4|tipoi[1]         ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |DataPath|ULA:G16|Mux1                     ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; No         ; |DataPath|BancoRegistradores:G7|Mux20      ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; No         ; |DataPath|BancoRegistradores:G7|Mux13      ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 28 LEs               ; 7 LEs                  ; No         ; |DataPath|ULA:G16|Mux2                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------+
-; Source assignments for memram:G17|altsyncram:RAM_rtl_0|altsyncram_jne1:auto_generated ;
+; Source assignments for memram:G17|altsyncram:RAM_rtl_0|altsyncram_v1v1:auto_generated ;
 +---------------------------------+--------------------+------+-------------------------+
 ; Assignment                      ; Value              ; From ; To                      ;
 +---------------------------------+--------------------+------+-------------------------+
@@ -441,7 +443,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; AUTO_CASCADE_CHAINS                ; ON                                                      ; AUTO_CASCADE   ;
 ; IGNORE_CASCADE_BUFFERS             ; OFF                                                     ; IGNORE_CASCADE ;
 ; WIDTH_BYTEENA                      ; 1                                                       ; Untyped        ;
-; OPERATION_MODE                     ; ROM                                                     ; Untyped        ;
+; OPERATION_MODE                     ; DUAL_PORT                                               ; Untyped        ;
 ; WIDTH_A                            ; 16                                                      ; Untyped        ;
 ; WIDTHAD_A                          ; 10                                                      ; Untyped        ;
 ; NUMWORDS_A                         ; 1001                                                    ; Untyped        ;
@@ -451,13 +453,13 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; WRCONTROL_ACLR_A                   ; NONE                                                    ; Untyped        ;
 ; INDATA_ACLR_A                      ; NONE                                                    ; Untyped        ;
 ; BYTEENA_ACLR_A                     ; NONE                                                    ; Untyped        ;
-; WIDTH_B                            ; 1                                                       ; Untyped        ;
-; WIDTHAD_B                          ; 1                                                       ; Untyped        ;
-; NUMWORDS_B                         ; 1                                                       ; Untyped        ;
+; WIDTH_B                            ; 16                                                      ; Untyped        ;
+; WIDTHAD_B                          ; 10                                                      ; Untyped        ;
+; NUMWORDS_B                         ; 1001                                                    ; Untyped        ;
 ; INDATA_REG_B                       ; CLOCK1                                                  ; Untyped        ;
 ; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                                  ; Untyped        ;
-; RDCONTROL_REG_B                    ; CLOCK1                                                  ; Untyped        ;
-; ADDRESS_REG_B                      ; CLOCK1                                                  ; Untyped        ;
+; RDCONTROL_REG_B                    ; CLOCK0                                                  ; Untyped        ;
+; ADDRESS_REG_B                      ; CLOCK0                                                  ; Untyped        ;
 ; OUTDATA_REG_B                      ; UNREGISTERED                                            ; Untyped        ;
 ; BYTEENA_REG_B                      ; CLOCK1                                                  ; Untyped        ;
 ; INDATA_ACLR_B                      ; NONE                                                    ; Untyped        ;
@@ -470,7 +472,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; WIDTH_BYTEENA_B                    ; 1                                                       ; Untyped        ;
 ; RAM_BLOCK_TYPE                     ; AUTO                                                    ; Untyped        ;
 ; BYTE_SIZE                          ; 8                                                       ; Untyped        ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                               ; Untyped        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                                ; Untyped        ;
 ; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                                    ; Untyped        ;
 ; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                                    ; Untyped        ;
 ; INIT_FILE                          ; db/Processador_v1_uniciclo.ram0_memram_e416e912.hdl.mif ; Untyped        ;
@@ -486,7 +488,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                                   ; Untyped        ;
 ; WIDTH_ECCSTATUS                    ; 3                                                       ; Untyped        ;
 ; DEVICE_FAMILY                      ; Cyclone V                                               ; Untyped        ;
-; CBXI_PARAMETER                     ; altsyncram_jne1                                         ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_v1v1                                         ; Untyped        ;
 +------------------------------------+---------------------------------------------------------+----------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -498,16 +500,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+---------------------------------+
 ; Number of entity instances                ; 1                               ;
 ; Entity Instance                           ; memram:G17|altsyncram:RAM_rtl_0 ;
-;     -- OPERATION_MODE                     ; ROM                             ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                       ;
 ;     -- WIDTH_A                            ; 16                              ;
 ;     -- NUMWORDS_A                         ; 1001                            ;
 ;     -- OUTDATA_REG_A                      ; UNREGISTERED                    ;
-;     -- WIDTH_B                            ; 1                               ;
-;     -- NUMWORDS_B                         ; 1                               ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                          ;
+;     -- WIDTH_B                            ; 16                              ;
+;     -- NUMWORDS_B                         ; 1001                            ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                          ;
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                    ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                            ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                       ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                        ;
 +-------------------------------------------+---------------------------------+
 
 
@@ -518,28 +520,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 32                          ;
 ;     plain             ; 32                          ;
-; arriav_lcell_comb     ; 403                         ;
+; arriav_lcell_comb     ; 411                         ;
 ;     arith             ; 175                         ;
 ;         0 data inputs ; 8                           ;
 ;         1 data inputs ; 22                          ;
 ;         2 data inputs ; 1                           ;
 ;         4 data inputs ; 28                          ;
 ;         5 data inputs ; 116                         ;
-;     extend            ; 6                           ;
-;         7 data inputs ; 6                           ;
-;     normal            ; 222                         ;
+;     extend            ; 8                           ;
+;         7 data inputs ; 8                           ;
+;     normal            ; 228                         ;
 ;         0 data inputs ; 2                           ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 43                          ;
-;         3 data inputs ; 25                          ;
-;         4 data inputs ; 33                          ;
-;         5 data inputs ; 43                          ;
-;         6 data inputs ; 74                          ;
+;         2 data inputs ; 41                          ;
+;         3 data inputs ; 32                          ;
+;         4 data inputs ; 31                          ;
+;         5 data inputs ; 65                          ;
+;         6 data inputs ; 55                          ;
 ; boundary_port         ; 185                         ;
 ; stratixv_ram_block    ; 16                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 21.30                       ;
-; Average LUT depth     ; 14.82                       ;
+; Max LUT depth         ; 22.10                       ;
+; Average LUT depth     ; 15.55                       ;
 +-----------------------+-----------------------------+
 
 
@@ -548,7 +550,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -558,10 +560,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Tue Dec 04 08:19:32 2018
+    Info: Processing started: Tue Dec 04 14:56:56 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processador_v1_uniciclo -c Processador_v1_uniciclo
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file ulafloat.vhd
+    Info (12022): Found design unit 1: UlaFloat-BEHAVIOR File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UlaFloat.vhd Line: 16
+    Info (12023): Found entity 1: UlaFloat File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UlaFloat.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file unidadedecontrole.vhd
     Info (12022): Found design unit 1: UnidadedeControle-behavior File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UnidadedeControle.vhd Line: 21
     Info (12023): Found entity 1: UnidadedeControle File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UnidadedeControle.vhd Line: 4
@@ -617,57 +622,89 @@ Info (12021): Found 2 design units, including 1 entities, in source file bancore
     Info (12022): Found design unit 1: BancoRegistradores-behavior File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/BancoRegistradores.vhd Line: 19
     Info (12023): Found entity 1: BancoRegistradores File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/BancoRegistradores.vhd Line: 6
 Info (12127): Elaborating entity "DataPath" for the top level hierarchy
-Info (12128): Elaborating entity "PC" for hierarchy "PC:G1" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 311
-Info (12128): Elaborating entity "SomadorPC" for hierarchy "SomadorPC:G2" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 312
-Info (12128): Elaborating entity "Qsll" for hierarchy "Qsll:G3" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 313
-Info (12128): Elaborating entity "memoria_ROM2" for hierarchy "memoria_ROM2:G4" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 314
-Info (12128): Elaborating entity "UnidadedeControle" for hierarchy "UnidadedeControle:G5" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 316
-Info (12128): Elaborating entity "Multiplexador2x1" for hierarchy "Multiplexador2x1:G6" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 318
-Info (12128): Elaborating entity "BancoRegistradores" for hierarchy "BancoRegistradores:G7" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 319
-Info (12128): Elaborating entity "ExtensordeSinal6To16bits" for hierarchy "ExtensordeSinal6To16bits:G8" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 321
-Info (12128): Elaborating entity "ShiftEsquerda" for hierarchy "ShiftEsquerda:G9" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 322
-Info (12128): Elaborating entity "Somadorde16bits" for hierarchy "Somadorde16bits:G10" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 323
-Info (12128): Elaborating entity "QAndBIT" for hierarchy "QAndBIT:G11" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 324
-Info (12128): Elaborating entity "Multiplexador2x1_16bits" for hierarchy "Multiplexador2x1_16bits:G12" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 325
-Info (12128): Elaborating entity "OperacaoDaULA" for hierarchy "OperacaoDaULA:G15" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 328
-Info (12128): Elaborating entity "ULA" for hierarchy "ULA:G16" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 329
-Info (12128): Elaborating entity "memram" for hierarchy "memram:G17" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 330
+Info (12128): Elaborating entity "PC" for hierarchy "PC:G1" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 312
+Info (12128): Elaborating entity "SomadorPC" for hierarchy "SomadorPC:G2" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 313
+Info (12128): Elaborating entity "Qsll" for hierarchy "Qsll:G3" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 314
+Info (12128): Elaborating entity "memoria_ROM2" for hierarchy "memoria_ROM2:G4" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 315
+Info (12128): Elaborating entity "UnidadedeControle" for hierarchy "UnidadedeControle:G5" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 317
+Info (12128): Elaborating entity "Multiplexador2x1" for hierarchy "Multiplexador2x1:G6" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 319
+Info (12128): Elaborating entity "BancoRegistradores" for hierarchy "BancoRegistradores:G7" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 320
+Info (12128): Elaborating entity "ExtensordeSinal6To16bits" for hierarchy "ExtensordeSinal6To16bits:G8" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 322
+Info (12128): Elaborating entity "ShiftEsquerda" for hierarchy "ShiftEsquerda:G9" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 323
+Info (12128): Elaborating entity "Somadorde16bits" for hierarchy "Somadorde16bits:G10" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 324
+Info (12128): Elaborating entity "QAndBIT" for hierarchy "QAndBIT:G11" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 325
+Info (12128): Elaborating entity "Multiplexador2x1_16bits" for hierarchy "Multiplexador2x1_16bits:G12" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 326
+Info (12128): Elaborating entity "OperacaoDaULA" for hierarchy "OperacaoDaULA:G15" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 329
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:G16" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 330
+Info (12128): Elaborating entity "UlaFloat" for hierarchy "ULA:G16|UlaFloat:opFloat" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/ULA.vhd Line: 77
+Warning (10631): VHDL Process Statement warning at UlaFloat.vhd(18): inferring latch(es) for signal or variable "RESULTADO", which holds its previous value in one or more paths through the process File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UlaFloat.vhd Line: 18
+Info (10041): Inferred latch for "RESULTADO[0]" at UlaFloat.vhd(18) File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UlaFloat.vhd Line: 18
+Info (10041): Inferred latch for "RESULTADO[1]" at UlaFloat.vhd(18) File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UlaFloat.vhd Line: 18
+Info (10041): Inferred latch for "RESULTADO[2]" at UlaFloat.vhd(18) File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UlaFloat.vhd Line: 18
+Info (10041): Inferred latch for "RESULTADO[3]" at UlaFloat.vhd(18) File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UlaFloat.vhd Line: 18
+Info (10041): Inferred latch for "RESULTADO[4]" at UlaFloat.vhd(18) File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UlaFloat.vhd Line: 18
+Info (10041): Inferred latch for "RESULTADO[5]" at UlaFloat.vhd(18) File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UlaFloat.vhd Line: 18
+Info (10041): Inferred latch for "RESULTADO[6]" at UlaFloat.vhd(18) File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UlaFloat.vhd Line: 18
+Info (10041): Inferred latch for "RESULTADO[7]" at UlaFloat.vhd(18) File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UlaFloat.vhd Line: 18
+Info (10041): Inferred latch for "RESULTADO[8]" at UlaFloat.vhd(18) File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UlaFloat.vhd Line: 18
+Info (10041): Inferred latch for "RESULTADO[9]" at UlaFloat.vhd(18) File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UlaFloat.vhd Line: 18
+Info (10041): Inferred latch for "RESULTADO[10]" at UlaFloat.vhd(18) File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UlaFloat.vhd Line: 18
+Info (10041): Inferred latch for "RESULTADO[11]" at UlaFloat.vhd(18) File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UlaFloat.vhd Line: 18
+Info (10041): Inferred latch for "RESULTADO[12]" at UlaFloat.vhd(18) File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UlaFloat.vhd Line: 18
+Info (10041): Inferred latch for "RESULTADO[13]" at UlaFloat.vhd(18) File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UlaFloat.vhd Line: 18
+Info (10041): Inferred latch for "RESULTADO[14]" at UlaFloat.vhd(18) File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UlaFloat.vhd Line: 18
+Info (10041): Inferred latch for "RESULTADO[15]" at UlaFloat.vhd(18) File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/UlaFloat.vhd Line: 18
+Info (12128): Elaborating entity "memram" for hierarchy "memram:G17" File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 331
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "memram:G17|RAM_rtl_0" 
-        Info (286033): Parameter OPERATION_MODE set to ROM
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
         Info (286033): Parameter WIDTH_A set to 16
         Info (286033): Parameter WIDTHAD_A set to 10
         Info (286033): Parameter NUMWORDS_A set to 1001
-        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter WIDTH_B set to 16
+        Info (286033): Parameter WIDTHAD_B set to 10
+        Info (286033): Parameter NUMWORDS_B set to 1001
         Info (286033): Parameter ADDRESS_ACLR_A set to NONE
-        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
         Info (286033): Parameter INDATA_ACLR_A set to NONE
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
         Info (286033): Parameter INIT_FILE set to db/Processador_v1_uniciclo.ram0_memram_e416e912.hdl.mif
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+        Info (286033): Parameter RDCONTROL_REG_B set to CLOCK0
 Info (12130): Elaborated megafunction instantiation "memram:G17|altsyncram:RAM_rtl_0"
 Info (12133): Instantiated megafunction "memram:G17|altsyncram:RAM_rtl_0" with the following parameter:
-    Info (12134): Parameter "OPERATION_MODE" = "ROM"
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
     Info (12134): Parameter "WIDTH_A" = "16"
     Info (12134): Parameter "WIDTHAD_A" = "10"
     Info (12134): Parameter "NUMWORDS_A" = "1001"
-    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "WIDTH_B" = "16"
+    Info (12134): Parameter "WIDTHAD_B" = "10"
+    Info (12134): Parameter "NUMWORDS_B" = "1001"
     Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
-    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
     Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "INIT_FILE" = "db/Processador_v1_uniciclo.ram0_memram_e416e912.hdl.mif"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_jne1.tdf
-    Info (12023): Found entity 1: altsyncram_jne1 File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/db/altsyncram_jne1.tdf Line: 27
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+    Info (12134): Parameter "RDCONTROL_REG_B" = "CLOCK0"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_v1v1.tdf
+    Info (12023): Found entity 1: altsyncram_v1v1 File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/db/altsyncram_v1v1.tdf Line: 27
+Warning (113028): 23 out of 1024 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/db/Processador_v1_uniciclo.ram0_memram_e416e912.hdl.mif Line: 1
+    Warning (113027): Addresses ranging from 1001 to 1023 are not initialized File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/db/Processador_v1_uniciclo.ram0_memram_e416e912.hdl.mif Line: 1
+Critical Warning (127004): Memory depth (1001) in the design file differs from memory depth (1024) in the Memory Initialization File "C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/db/Processador_v1_uniciclo.ram0_memram_e416e912.hdl.mif" -- truncated remaining initial content value to fit RAM File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "Instruction_to_Control_outWaveform[1]" is stuck at GND File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 22
     Warning (13410): Pin "Instruction_to_Control_outWaveform[2]" is stuck at GND File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 22
     Warning (13410): Pin "Instruction_to_Control_outWaveform[3]" is stuck at GND File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 22
     Warning (13410): Pin "Instruction_to_register2_outWaveform[0]" is stuck at GND File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 24
     Warning (13410): Pin "Instruction_to_controlULA_outWaveform[2]" is stuck at GND File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 25
-    Warning (13410): Pin "Instruction_to_extensorDeSinal_outWaveform[1]" is stuck at GND File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 26
     Warning (13410): Pin "Instruction_to_extensorDeSinal_outWaveform[2]" is stuck at GND File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 26
-    Warning (13410): Pin "Instruction_to_extensorDeSinal_outWaveform[4]" is stuck at GND File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 26
-    Warning (13410): Pin "Instruction_to_extensorDeSinal_outWaveform[5]" is stuck at GND File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 26
     Warning (13410): Pin "Instruction_to_Jump_outWaveform[0]" is stuck at GND File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 27
     Warning (13410): Pin "Instruction_to_Jump_outWaveform[1]" is stuck at GND File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 27
     Warning (13410): Pin "Instruction_to_Jump_outWaveform[2]" is stuck at GND File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 27
@@ -692,18 +729,18 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "Flag_branch_OUT" is stuck at GND File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 49
     Warning (13410): Pin "Flag_jump_OUT" is stuck at GND File: C:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/DataPath.vhd Line: 51
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 28 registers lost all their fanouts during netlist optimizations.
+Info (17049): 26 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 617 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 625 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 184 output pins
-    Info (21061): Implemented 416 logic cells
+    Info (21061): Implemented 424 logic cells
     Info (21064): Implemented 16 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 5263 megabytes
-    Info: Processing ended: Tue Dec 04 08:20:14 2018
-    Info: Elapsed time: 00:00:42
-    Info: Total CPU time (on all processors): 00:00:54
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
+    Info: Peak virtual memory: 5257 megabytes
+    Info: Processing ended: Tue Dec 04 14:57:42 2018
+    Info: Elapsed time: 00:00:46
+    Info: Total CPU time (on all processors): 00:01:00
 
 

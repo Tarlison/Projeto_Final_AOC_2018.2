@@ -206,7 +206,7 @@ END COMPONENT;
 			);
 		END COMPONENT;	
 		
-		COMPONENT ULA is
+	COMPONENT ULA is
 			Port
 			(
 				EntradaA:	    in  std_logic_vector(15 downto 0);
@@ -218,6 +218,7 @@ END COMPONENT;
 			);
 
 		End COMPONENT;	
+		
 		
 		-------Entrada e Saida do PC---------------------------------
 		SIGNAL SomadorToPc: 			        	  std_logic_vector(15 downto 0);
