@@ -7,19 +7,19 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/simulation/qsim
+dC:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/simulation/qsim
 Edatapath
-Z1 w1543911954
-Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 PDz30Zoj;e1JEj1l7dCiT1
-Z3 DPx8 cyclonev 19 cyclonev_components 0 22 O_kVZAFaN7XDl67flUT[n1
-Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 ;`SHL]^j4UaADA9ENAN^]0
-Z5 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
-Z6 DPx6 altera 11 dffeas_pack 0 22 Dg`GWTC`^Q8GNSMPeo22;3
-Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
-Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z9 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z10 DPx6 altera 28 altera_primitives_components 0 22 _LNC5n6B?5VN@W;M4Dg@k1
-R0
+Z0 w1543925860
+Z1 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 PDz30Zoj;e1JEj1l7dCiT1
+Z2 DPx8 cyclonev 19 cyclonev_components 0 22 O_kVZAFaN7XDl67flUT[n1
+Z3 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 ;`SHL]^j4UaADA9ENAN^]0
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 Dg`GWTC`^Q8GNSMPeo22;3
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z9 DPx6 altera 28 altera_primitives_components 0 22 _LNC5n6B?5VN@W;M4Dg@k1
+Z10 dC:/Projeto_final_AOC_2018.2/Processador_v1_uniciclo/simulation/qsim
 Z11 8Processador_v1_uniciclo.vho
 Z12 FProcessador_v1_uniciclo.vho
 l0
@@ -28,15 +28,16 @@ VLFG8E90m2CF<>z4M9>iKE0
 !s100 >9J63So2<Xg<V>;2XTbiL3
 Z13 OV;C;10.5b;63
 32
-Z14 !s110 1543911955
+Z14 !s110 1543925861
 !i10b 1
-Z15 !s108 1543911955.000000
+Z15 !s108 1543925861.000000
 Z16 !s90 -work|work|Processador_v1_uniciclo.vho|
 Z17 !s107 Processador_v1_uniciclo.vho|
 !i113 1
 Z18 o-work work
 Z19 tExplicit 1 CvgOpt 0
 Astructure
+R1
 R2
 R3
 R4
@@ -45,12 +46,11 @@ R6
 R7
 R8
 R9
-R10
 DEx4 work 8 datapath 0 22 LFG8E90m2CF<>z4M9>iKE0
-l498
+l496
 L70
-VCW]?RH`NPn9MVR<J4B^<;3
-!s100 i[aB6b2EfOHaPTd4Nod8>2
+Vd]EK@YlW;4D`6]0_Sged=1
+!s100 S<T?Yh`LABN4iK9^603?O3
 R13
 32
 R14
@@ -62,10 +62,10 @@ R17
 R18
 R19
 Edatapath_vhd_vec_tst
-Z20 w1543911952
+Z20 w1543925858
+R7
 R8
-R9
-R0
+R10
 Z21 8Waveform1.vwf.vht
 Z22 FWaveform1.vwf.vht
 l0
@@ -74,29 +74,29 @@ VIHFkm4W?_O7LbQ`];lz?<1
 !s100 WSND17n`95cIi1P?e3l0C1
 R13
 32
-Z23 !s110 1543911956
+R14
 !i10b 1
-Z24 !s108 1543911956.000000
-Z25 !s90 -work|work|Waveform1.vwf.vht|
-Z26 !s107 Waveform1.vwf.vht|
+R15
+Z23 !s90 -work|work|Waveform1.vwf.vht|
+Z24 !s107 Waveform1.vwf.vht|
 !i113 1
 R18
 R19
 Adatapath_arch
+R7
 R8
-R9
-Z27 DEx4 work 20 datapath_vhd_vec_tst 0 22 IHFkm4W?_O7LbQ`];lz?<1
+Z25 DEx4 work 20 datapath_vhd_vec_tst 0 22 IHFkm4W?_O7LbQ`];lz?<1
 l94
 L33
-V`A=KDeOB`8cngKC15OXCP0
-!s100 GIKg]E=U1ODef?2V6@9F62
+Z26 VgHCNmOfoYFjgK5zeQWDQm1
+Z27 !s100 Jd?8NS8>A;0PJUc=a=Dm83
 R13
 32
-R23
+R14
 !i10b 1
+R15
+R23
 R24
-R25
-R26
 !i113 1
 R18
 R19

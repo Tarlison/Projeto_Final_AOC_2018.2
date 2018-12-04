@@ -27,8 +27,7 @@ BEGIN
 	listaInstrucoes(1) := "0000010100001001";-- sub $s2,$s4,$s1
 	listaInstrucoes(2) := "0000011010001010";-- mult $s3,$s2,$s1
 	listaInstrucoes(3) := "0000101100110011";-- and $s5,$s4,$6
-	listaInstrucoes(4) := "0000101100110100";-- or $s5,$s4,$6
-	--listaInstrucoes(5) := "0001100000000001";
+	listaInstrucoes(4) := "0001100000000001";-- lw $s0,1($s4); 
 	--listaInstrucoes(6) := "0001000000000101";
 	--listaInstrucoes(7) := "0001100000000000";
 END PROCEDURE;

@@ -284,6 +284,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "Instruction_to_Control_outWaveform[0]",
+					"strict" : false
+				},
+				{
 					"name" : "Instruction_to_register1_outWaveform[0]",
 					"strict" : false
 				},
@@ -312,7 +316,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "Instruction_to_controlULA_outWaveform[2]",
+					"name" : "Instruction_to_extensorDeSinal_outWaveform[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Instruction_to_extensorDeSinal_outWaveform[3]",
 					"strict" : false
 				},
 				{
@@ -324,7 +332,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "out_Saida_OperacaoDaULA[2]",
+					"name" : "out_Saida_OperacaoDaULA[3]",
 					"strict" : false
 				},
 				{
@@ -581,6 +589,26 @@
 				},
 				{
 					"name" : "Saida_adress_to_RAM_outWaveform[15]",
+					"strict" : false
+				},
+				{
+					"name" : "Flag_regdest_OUT",
+					"strict" : false
+				},
+				{
+					"name" : "Flag_origialu_OUT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Flag_memparareg_OUT",
+					"strict" : false
+				},
+				{
+					"name" : "Flag_lemem_OUT",
+					"strict" : false
+				},
+				{
+					"name" : "Flag_aluSRC_OUT",
 					"strict" : false
 				},
 				{

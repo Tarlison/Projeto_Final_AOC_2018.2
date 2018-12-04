@@ -1,5 +1,5 @@
 Flow report for Processador_v1_uniciclo
-Tue Dec 04 04:27:44 2018
+Tue Dec 04 08:20:14 2018
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Tue Dec 04 04:27:44 2018       ;
+; Flow Status                     ; Successful - Tue Dec 04 08:20:14 2018       ;
 ; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                   ; Processador_v1_uniciclo                     ;
 ; Top-level Entity Name           ; DataPath                                    ;
@@ -51,7 +51,7 @@ refer to the applicable agreement for further details.
 ; Total registers                 ; 32                                          ;
 ; Total pins                      ; 185                                         ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
+; Total block memory bits         ; 16,016                                      ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+-------------------------+
 ; Option            ; Setting                 ;
 +-------------------+-------------------------+
-; Start date & time ; 12/04/2018 04:26:58     ;
+; Start date & time ; 12/04/2018 08:19:33     ;
 ; Main task         ; Compilation             ;
 ; Revision Name     ; Processador_v1_uniciclo ;
 +-------------------+-------------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+-------------------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value           ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+-------------------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 176646868892689.154391201810708        ; --                      ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 132098961924332.154392597307884        ; --                      ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                      ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                      ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --                      ; DataPath    ; Top        ;
@@ -95,8 +95,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:47     ; 1.0                     ; 5242 MB             ; 00:01:02                           ;
-; Total                ; 00:00:47     ; --                      ; --                  ; 00:01:02                           ;
+; Analysis & Synthesis ; 00:00:42     ; 1.0                     ; 5263 MB             ; 00:00:54                           ;
+; Total                ; 00:00:42     ; --                      ; --                  ; 00:00:54                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

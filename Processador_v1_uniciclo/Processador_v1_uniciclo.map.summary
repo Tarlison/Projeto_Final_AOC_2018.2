@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Tue Dec 04 04:27:44 2018
+Analysis & Synthesis Status : Successful - Tue Dec 04 08:20:14 2018
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 Revision Name : Processador_v1_uniciclo
 Top-level Entity Name : DataPath
@@ -7,7 +7,7 @@ Logic utilization (in ALMs) : N/A
 Total registers : 32
 Total pins : 185
 Total virtual pins : 0
-Total block memory bits : 0
+Total block memory bits : 16,016
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
