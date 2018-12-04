@@ -1,0 +1,536 @@
+Analysis & Synthesis report for Processador_v1_uniciclo
+Tue Dec 04 04:27:44 2018
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Logic Cells Representing Combinational Loops
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Dec 04 04:27:44 2018       ;
+; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                   ; Processador_v1_uniciclo                     ;
+; Top-level Entity Name           ; DataPath                                    ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 32                                          ;
+; Total pins                      ; 185                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                  ;
++---------------------------------------------------------------------------------+--------------------+-------------------------+
+; Option                                                                          ; Setting            ; Default Value           ;
++---------------------------------------------------------------------------------+--------------------+-------------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                         ;
+; Top-level entity name                                                           ; DataPath           ; Processador_v1_uniciclo ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V               ;
+; Use smart compilation                                                           ; Off                ; Off                     ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                      ;
+; Enable compact report table                                                     ; Off                ; Off                     ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto                    ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                     ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                     ;
+; Preserve fewer node names                                                       ; On                 ; On                      ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable                  ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001            ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993               ;
+; State Machine Processing                                                        ; Auto               ; Auto                    ;
+; Safe State Machine                                                              ; Off                ; Off                     ;
+; Extract Verilog State Machines                                                  ; On                 ; On                      ;
+; Extract VHDL State Machines                                                     ; On                 ; On                      ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                     ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000                    ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                     ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                      ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                      ;
+; Parallel Synthesis                                                              ; On                 ; On                      ;
+; DSP Block Balancing                                                             ; Auto               ; Auto                    ;
+; NOT Gate Push-Back                                                              ; On                 ; On                      ;
+; Power-Up Don't Care                                                             ; On                 ; On                      ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                     ;
+; Remove Duplicate Registers                                                      ; On                 ; On                      ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                     ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                     ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                     ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                     ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                     ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                      ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                     ;
+; Optimization Technique                                                          ; Balanced           ; Balanced                ;
+; Carry Chain Length                                                              ; 70                 ; 70                      ;
+; Auto Carry Chains                                                               ; On                 ; On                      ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                      ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                     ;
+; Auto ROM Replacement                                                            ; On                 ; On                      ;
+; Auto RAM Replacement                                                            ; On                 ; On                      ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                      ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto                    ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto                    ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                      ;
+; Strict RAM Replacement                                                          ; Off                ; Off                     ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                      ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                     ;
+; Auto Resource Sharing                                                           ; Off                ; Off                     ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                     ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                     ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                     ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                      ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                     ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                      ;
+; Report Parameter Settings                                                       ; On                 ; On                      ;
+; Report Source Assignments                                                       ; On                 ; On                      ;
+; Report Connectivity Checks                                                      ; On                 ; On                      ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                     ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                       ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation      ;
+; HDL message level                                                               ; Level2             ; Level2                  ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                     ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000                    ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000                    ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                     ;
+; Clock MUX Protection                                                            ; On                 ; On                      ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                     ;
+; Block Design Naming                                                             ; Auto               ; Auto                    ;
+; SDC constraint protection                                                       ; Off                ; Off                     ;
+; Synthesis Effort                                                                ; Auto               ; Auto                    ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                      ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                     ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium                  ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto                    ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                      ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                      ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                     ;
++---------------------------------------------------------------------------------+--------------------+-------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                          ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                   ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
+; UnidadedeControle.vhd            ; yes             ; User VHDL File  ; C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/UnidadedeControle.vhd        ;         ;
+; ULA.vhd                          ; yes             ; User VHDL File  ; C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/ULA.vhd                      ;         ;
+; SomadorPC.vhd                    ; yes             ; User VHDL File  ; C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/SomadorPC.vhd                ;         ;
+; Somadorde16bits.vhd              ; yes             ; User VHDL File  ; C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/Somadorde16bits.vhd          ;         ;
+; ShiftEsquerda.vhd                ; yes             ; User VHDL File  ; C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/ShiftEsquerda.vhd            ;         ;
+; Qsll.vhd                         ; yes             ; User VHDL File  ; C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/Qsll.vhd                     ;         ;
+; QAndBIT.vhd                      ; yes             ; User VHDL File  ; C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/QAndBIT.vhd                  ;         ;
+; PC.vhd                           ; yes             ; User VHDL File  ; C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/PC.vhd                       ;         ;
+; OperacaoDaULA.vhd                ; yes             ; User VHDL File  ; C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/OperacaoDaULA.vhd            ;         ;
+; Multiplexador2x1_16bits.vhd      ; yes             ; User VHDL File  ; C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/Multiplexador2x1_16bits.vhd  ;         ;
+; Multiplexador2x1.vhd             ; yes             ; User VHDL File  ; C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/Multiplexador2x1.vhd         ;         ;
+; memram.vhd                       ; yes             ; User VHDL File  ; C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/memram.vhd                   ;         ;
+; memoria_rom2.vhd                 ; yes             ; User VHDL File  ; C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/memoria_rom2.vhd             ;         ;
+; ExtensordeSinal6To16bits.vhd     ; yes             ; User VHDL File  ; C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/ExtensordeSinal6To16bits.vhd ;         ;
+; DataPath.vhd                     ; yes             ; User VHDL File  ; C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd                 ;         ;
+; BancoRegistradores.vhd           ; yes             ; User VHDL File  ; C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/BancoRegistradores.vhd       ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                ;
++---------------------------------------------+------------------------------+
+; Resource                                    ; Usage                        ;
++---------------------------------------------+------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 204                          ;
+;                                             ;                              ;
+; Combinational ALUT usage for logic          ; 367                          ;
+;     -- 7 input functions                    ; 10                           ;
+;     -- 6 input functions                    ; 28                           ;
+;     -- 5 input functions                    ; 98                           ;
+;     -- 4 input functions                    ; 57                           ;
+;     -- <=3 input functions                  ; 174                          ;
+;                                             ;                              ;
+; Dedicated logic registers                   ; 32                           ;
+;                                             ;                              ;
+; I/O pins                                    ; 185                          ;
+;                                             ;                              ;
+; Total DSP Blocks                            ; 0                            ;
+;                                             ;                              ;
+; Maximum fan-out node                        ; BancoRegistradores:G7|Mux0~1 ;
+; Maximum fan-out                             ; 107                          ;
+; Total fan-out                               ; 1913                         ;
+; Average fan-out                             ; 2.49                         ;
++---------------------------------------------+------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                       ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+--------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Entity Name        ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+--------------------+--------------+
+; |DataPath                  ; 367 (0)             ; 32 (0)                    ; 0                 ; 0          ; 185  ; 0            ; |DataPath                       ; DataPath           ; work         ;
+;    |BancoRegistradores:G7| ; 51 (51)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DataPath|BancoRegistradores:G7 ; BancoRegistradores ; work         ;
+;    |PC:G1|                 ; 0 (0)               ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |DataPath|PC:G1                 ; PC                 ; work         ;
+;    |SomadorPC:G2|          ; 16 (16)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |DataPath|SomadorPC:G2          ; SomadorPC          ; work         ;
+;    |ULA:G16|               ; 283 (283)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DataPath|ULA:G16               ; ULA                ; work         ;
+;    |memoria_ROM2:G4|       ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DataPath|memoria_ROM2:G4       ; memoria_ROM2       ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+--------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                ;
++--------------------------------------------------------+----+
+; Logic Cell Name                                        ;    ;
++--------------------------------------------------------+----+
+; Multiplexador2x1_16bits:G18|SAIDA[0]~1                 ;    ;
+; Multiplexador2x1_16bits:G18|SAIDA[1]~3                 ;    ;
+; Multiplexador2x1_16bits:G18|SAIDA[2]~2                 ;    ;
+; Multiplexador2x1_16bits:G18|SAIDA[3]~4                 ;    ;
+; Multiplexador2x1_16bits:G18|SAIDA[4]~5                 ;    ;
+; Multiplexador2x1_16bits:G18|SAIDA[5]~6                 ;    ;
+; Multiplexador2x1_16bits:G18|SAIDA[6]~7                 ;    ;
+; Multiplexador2x1_16bits:G18|SAIDA[7]~8                 ;    ;
+; Multiplexador2x1_16bits:G18|SAIDA[8]~15                ;    ;
+; Multiplexador2x1_16bits:G18|SAIDA[9]~14                ;    ;
+; Multiplexador2x1_16bits:G18|SAIDA[10]~13               ;    ;
+; Multiplexador2x1_16bits:G18|SAIDA[11]~12               ;    ;
+; Multiplexador2x1_16bits:G18|SAIDA[12]~11               ;    ;
+; Multiplexador2x1_16bits:G18|SAIDA[13]~10               ;    ;
+; Multiplexador2x1_16bits:G18|SAIDA[14]~9                ;    ;
+; Multiplexador2x1_16bits:G18|SAIDA[15]~0                ;    ;
+; Number of logic cells representing combinational loops ; 16 ;
++--------------------------------------------------------+----+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; ShiftEsquerda:G9|AUX[0,1]              ; Stuck at GND due to stuck port data_in ;
+; Qsll:G3|vet[0,1]                       ; Stuck at GND due to stuck port data_in ;
+; ShiftEsquerda:G9|SAIDA[0,1]            ; Stuck at GND due to stuck port data_in ;
+; Qsll:G3|resshift[0,1]                  ; Stuck at GND due to stuck port data_in ;
+; Qsll:G3|resshift[5]                    ; Merged with Qsll:G3|resshift[12]       ;
+; ShiftEsquerda:G9|SAIDA[6..9,11..15]    ; Merged with ShiftEsquerda:G9|SAIDA[10] ;
+; Qsll:G3|vet[5]                         ; Merged with Qsll:G3|vet[12]            ;
+; ShiftEsquerda:G9|AUX[6..9,11..15]      ; Merged with ShiftEsquerda:G9|AUX[10]   ;
+; Qsll:G3|vet[6,7]                       ; Merged with Qsll:G3|vet[13]            ;
+; Qsll:G3|resshift[6,7]                  ; Merged with Qsll:G3|resshift[13]       ;
+; Qsll:G3|vet[8]                         ; Stuck at GND due to stuck port data_in ;
+; memram:G17|SaiData[0..15]              ; Lost fanout                            ;
+; Qsll:G3|resshift[8]                    ; Stuck at GND due to stuck port data_in ;
+; Qsll:G3|vet[2..4,9..13]                ; Stuck at GND due to stuck port data_in ;
+; Qsll:G3|resshift[2..4,9..15]           ; Lost fanout                            ;
+; Somadorde16bits:G10|SAIDA[2..15]       ; Lost fanout                            ;
+; ShiftEsquerda:G9|SAIDA[10]             ; Lost fanout                            ;
+; ShiftEsquerda:G9|AUX[10]               ; Lost fanout                            ;
+; ShiftEsquerda:G9|SAIDA[5]              ; Lost fanout                            ;
+; ShiftEsquerda:G9|AUX[5]                ; Lost fanout                            ;
+; ShiftEsquerda:G9|SAIDA[4]              ; Lost fanout                            ;
+; ShiftEsquerda:G9|AUX[4]                ; Lost fanout                            ;
+; ShiftEsquerda:G9|SAIDA[3]              ; Lost fanout                            ;
+; ShiftEsquerda:G9|AUX[3]                ; Lost fanout                            ;
+; ShiftEsquerda:G9|SAIDA[2]              ; Lost fanout                            ;
+; ShiftEsquerda:G9|AUX[2]                ; Lost fanout                            ;
+; Somadorde16bits:G10|SAIDA[0,1]         ; Lost fanout                            ;
+; Total Number of Removed Registers = 94 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                      ;
++-------------------------------+---------------------------+------------------------------------------------------+
+; Register name                 ; Reason for Removal        ; Registers Removed due to This Register               ;
++-------------------------------+---------------------------+------------------------------------------------------+
+; Qsll:G3|vet[0]                ; Stuck at GND              ; Qsll:G3|resshift[0], Somadorde16bits:G10|SAIDA[0]    ;
+;                               ; due to stuck port data_in ;                                                      ;
+; Qsll:G3|vet[1]                ; Stuck at GND              ; Qsll:G3|resshift[1], Somadorde16bits:G10|SAIDA[1]    ;
+;                               ; due to stuck port data_in ;                                                      ;
+; Qsll:G3|vet[8]                ; Stuck at GND              ; Qsll:G3|resshift[8], Somadorde16bits:G10|SAIDA[8]    ;
+;                               ; due to stuck port data_in ;                                                      ;
+; Somadorde16bits:G10|SAIDA[15] ; Lost Fanouts              ; ShiftEsquerda:G9|SAIDA[10], ShiftEsquerda:G9|AUX[10] ;
+; ShiftEsquerda:G9|AUX[0]       ; Stuck at GND              ; ShiftEsquerda:G9|SAIDA[0]                            ;
+;                               ; due to stuck port data_in ;                                                      ;
+; ShiftEsquerda:G9|AUX[1]       ; Stuck at GND              ; ShiftEsquerda:G9|SAIDA[1]                            ;
+;                               ; due to stuck port data_in ;                                                      ;
+; ShiftEsquerda:G9|SAIDA[5]     ; Lost Fanouts              ; ShiftEsquerda:G9|AUX[5]                              ;
+; ShiftEsquerda:G9|SAIDA[4]     ; Lost Fanouts              ; ShiftEsquerda:G9|AUX[4]                              ;
+; ShiftEsquerda:G9|SAIDA[3]     ; Lost Fanouts              ; ShiftEsquerda:G9|AUX[3]                              ;
+; ShiftEsquerda:G9|SAIDA[2]     ; Lost Fanouts              ; ShiftEsquerda:G9|AUX[2]                              ;
++-------------------------------+---------------------------+------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 32    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DataPath|BancoRegistradores:G7|Reg[6][0] ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |DataPath|BancoRegistradores:G7|Reg[0][6] ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DataPath|ULA:G16|Prod                    ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DataPath|ULA:G16|Prod                    ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DataPath|ULA:G16|Prod                    ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DataPath|ULA:G16|Prod                    ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DataPath|ULA:G16|Prod                    ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |DataPath|ULA:G16|Prod                    ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |DataPath|ULA:G16|Mux0                    ;
+; 10:1               ; 7 bits    ; 42 LEs        ; 42 LEs               ; 0 LEs                  ; No         ; |DataPath|ULA:G16|Mux6                    ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; No         ; |DataPath|BancoRegistradores:G7|Mux20     ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 64 LEs               ; 16 LEs                 ; No         ; |DataPath|BancoRegistradores:G7|Mux0      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 32                          ;
+;     plain             ; 32                          ;
+; arriav_lcell_comb     ; 369                         ;
+;     arith             ; 175                         ;
+;         0 data inputs ; 8                           ;
+;         1 data inputs ; 17                          ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 86                          ;
+;         4 data inputs ; 10                          ;
+;         5 data inputs ; 42                          ;
+;     extend            ; 10                          ;
+;         7 data inputs ; 10                          ;
+;     normal            ; 184                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 44                          ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 47                          ;
+;         5 data inputs ; 56                          ;
+;         6 data inputs ; 28                          ;
+; boundary_port         ; 185                         ;
+;                       ;                             ;
+; Max LUT depth         ; 20.70                       ;
+; Average LUT depth     ; 14.80                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:07     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Tue Dec 04 04:26:57 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processador_v1_uniciclo -c Processador_v1_uniciclo
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file unidadedecontrole.vhd
+    Info (12022): Found design unit 1: UnidadedeControle-behavior File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/UnidadedeControle.vhd Line: 21
+    Info (12023): Found entity 1: UnidadedeControle File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/UnidadedeControle.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
+    Info (12022): Found design unit 1: ULA-behavior File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/ULA.vhd Line: 19
+    Info (12023): Found entity 1: ULA File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/ULA.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file somadorpc.vhd
+    Info (12022): Found design unit 1: SomadorPC-behavior File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/SomadorPC.vhd Line: 13
+    Info (12023): Found entity 1: SomadorPC File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/SomadorPC.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file somadorde16bits.vhd
+    Info (12022): Found design unit 1: Somadorde16bits-BEHAVIOR File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/Somadorde16bits.vhd Line: 14
+    Info (12023): Found entity 1: Somadorde16bits File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/Somadorde16bits.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file shiftesquerda.vhd
+    Info (12022): Found design unit 1: ShiftEsquerda-BEHAVIOR File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/ShiftEsquerda.vhd Line: 16
+    Info (12023): Found entity 1: ShiftEsquerda File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/ShiftEsquerda.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file registerjk.vhd
+    Info (12022): Found design unit 1: registerjk-behavior File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/registerjk.vhd Line: 10
+    Info (12023): Found entity 1: registerjk File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/registerjk.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file qsll.vhd
+    Info (12022): Found design unit 1: Qsll-behavior File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/Qsll.vhd Line: 13
+    Info (12023): Found entity 1: Qsll File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/Qsll.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file qandbit.vhd
+    Info (12022): Found design unit 1: QandBIT-behavior File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/QAndBIT.vhd Line: 11
+    Info (12023): Found entity 1: QAndBIT File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/QAndBIT.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file pc.vhd
+    Info (12022): Found design unit 1: PC-behavior File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/PC.vhd Line: 17
+    Info (12023): Found entity 1: PC File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/PC.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file operacaodaula.vhd
+    Info (12022): Found design unit 1: OperacaoDaULA-BEHAVIOR File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/OperacaoDaULA.vhd Line: 16
+    Info (12023): Found entity 1: OperacaoDaULA File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/OperacaoDaULA.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file multiplexador2x1_16bits.vhd
+    Info (12022): Found design unit 1: Multiplexador2x1_16bits-Multiplexador2x1_16bits File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/Multiplexador2x1_16bits.vhd Line: 16
+    Info (12023): Found entity 1: Multiplexador2x1_16bits File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/Multiplexador2x1_16bits.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file multiplexador2x1.vhd
+    Info (12022): Found design unit 1: Multiplexador2x1-Multiplexador2x1 File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/Multiplexador2x1.vhd Line: 16
+    Info (12023): Found entity 1: Multiplexador2x1 File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/Multiplexador2x1.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file memram.vhd
+    Info (12022): Found design unit 1: memram-behavior File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/memram.vhd Line: 14
+    Info (12023): Found entity 1: memram File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/memram.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file memoria_rom2.vhd
+    Info (12022): Found design unit 1: memoria_ROM2-behavior File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/memoria_rom2.vhd Line: 20
+    Info (12023): Found entity 1: memoria_ROM2 File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/memoria_rom2.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file extensordesinal6to16bits.vhd
+    Info (12022): Found design unit 1: ExtensordeSinal6To16bits-BEHAVIOR File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/ExtensordeSinal6To16bits.vhd Line: 15
+    Info (12023): Found entity 1: ExtensordeSinal6To16bits File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/ExtensordeSinal6To16bits.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file datapath.vhd
+    Info (12022): Found design unit 1: DataPath-behavior File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 58
+    Info (12023): Found entity 1: DataPath File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file contsinc.vhd
+    Info (12022): Found design unit 1: contsinc-behavior File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/contsinc.vhd Line: 11
+    Info (12023): Found entity 1: contsinc File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/contsinc.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradores.vhd
+    Info (12022): Found design unit 1: BancoRegistradores-behavior File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/BancoRegistradores.vhd Line: 19
+    Info (12023): Found entity 1: BancoRegistradores File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/BancoRegistradores.vhd Line: 6
+Info (12127): Elaborating entity "DataPath" for the top level hierarchy
+Info (12128): Elaborating entity "PC" for hierarchy "PC:G1" File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 311
+Info (12128): Elaborating entity "SomadorPC" for hierarchy "SomadorPC:G2" File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 312
+Info (12128): Elaborating entity "Qsll" for hierarchy "Qsll:G3" File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 313
+Info (12128): Elaborating entity "memoria_ROM2" for hierarchy "memoria_ROM2:G4" File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 314
+Info (12128): Elaborating entity "UnidadedeControle" for hierarchy "UnidadedeControle:G5" File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 316
+Info (12128): Elaborating entity "Multiplexador2x1" for hierarchy "Multiplexador2x1:G6" File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 318
+Info (12128): Elaborating entity "BancoRegistradores" for hierarchy "BancoRegistradores:G7" File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 319
+Info (12128): Elaborating entity "ExtensordeSinal6To16bits" for hierarchy "ExtensordeSinal6To16bits:G8" File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 321
+Info (12128): Elaborating entity "ShiftEsquerda" for hierarchy "ShiftEsquerda:G9" File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 322
+Info (12128): Elaborating entity "Somadorde16bits" for hierarchy "Somadorde16bits:G10" File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 323
+Info (12128): Elaborating entity "QAndBIT" for hierarchy "QAndBIT:G11" File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 324
+Info (12128): Elaborating entity "Multiplexador2x1_16bits" for hierarchy "Multiplexador2x1_16bits:G12" File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 325
+Info (12128): Elaborating entity "OperacaoDaULA" for hierarchy "OperacaoDaULA:G15" File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 328
+Info (12128): Elaborating entity "ULA" for hierarchy "ULA:G16" File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 329
+Info (12128): Elaborating entity "memram" for hierarchy "memram:G17" File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 330
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Instruction_to_Control_outWaveform[0]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 22
+    Warning (13410): Pin "Instruction_to_Control_outWaveform[1]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 22
+    Warning (13410): Pin "Instruction_to_Control_outWaveform[2]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 22
+    Warning (13410): Pin "Instruction_to_Control_outWaveform[3]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 22
+    Warning (13410): Pin "Instruction_to_register2_outWaveform[0]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 24
+    Warning (13410): Pin "Instruction_to_extensorDeSinal_outWaveform[0]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 26
+    Warning (13410): Pin "Instruction_to_extensorDeSinal_outWaveform[1]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 26
+    Warning (13410): Pin "Instruction_to_extensorDeSinal_outWaveform[2]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 26
+    Warning (13410): Pin "Instruction_to_extensorDeSinal_outWaveform[3]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 26
+    Warning (13410): Pin "Instruction_to_extensorDeSinal_outWaveform[4]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 26
+    Warning (13410): Pin "Instruction_to_extensorDeSinal_outWaveform[5]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 26
+    Warning (13410): Pin "Instruction_to_Jump_outWaveform[0]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 27
+    Warning (13410): Pin "Instruction_to_Jump_outWaveform[1]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 27
+    Warning (13410): Pin "Instruction_to_Jump_outWaveform[2]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 27
+    Warning (13410): Pin "Instruction_to_Jump_outWaveform[3]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 27
+    Warning (13410): Pin "Instruction_to_Jump_outWaveform[4]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 27
+    Warning (13410): Pin "Instruction_to_Jump_outWaveform[5]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 27
+    Warning (13410): Pin "Instruction_to_Jump_outWaveform[6]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 27
+    Warning (13410): Pin "Instruction_to_Jump_outWaveform[7]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 27
+    Warning (13410): Pin "Instruction_to_Jump_outWaveform[8]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 27
+    Warning (13410): Pin "Instruction_to_Jump_outWaveform[9]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 27
+    Warning (13410): Pin "Instruction_to_Jump_outWaveform[10]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 27
+    Warning (13410): Pin "Instruction_to_Jump_outWaveform[11]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 27
+    Warning (13410): Pin "out_Saida_OperacaoDaULA[3]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 29
+    Warning (13410): Pin "out_Saida_OperacaoDaULA[4]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 29
+    Warning (13410): Pin "out_Saida_OperacaoDaULA[5]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 29
+    Warning (13410): Pin "out_Saida_OperacaoDaULA[6]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 29
+    Warning (13410): Pin "Flag_regdest_OUT" is stuck at VCC File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 43
+    Warning (13410): Pin "Flag_origialu_OUT[0]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 44
+    Warning (13410): Pin "Flag_origialu_OUT[1]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 44
+    Warning (13410): Pin "Flag_origialu_OUT[2]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 44
+    Warning (13410): Pin "Flag_origialu_OUT[3]" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 44
+    Warning (13410): Pin "Flag_memparareg_OUT" is stuck at VCC File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 45
+    Warning (13410): Pin "Flag_escrevereg_OUT" is stuck at VCC File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 46
+    Warning (13410): Pin "Flag_lemem_OUT" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 47
+    Warning (13410): Pin "Flag_escrevemem_OUT" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 48
+    Warning (13410): Pin "Flag_branch_OUT" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 49
+    Warning (13410): Pin "Flag_aluSRC_OUT" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 50
+    Warning (13410): Pin "Flag_jump_OUT" is stuck at GND File: C:/Users/Tarlison Sander/Desktop/Final_Judgment_Processor/Processador_v1_uniciclo/DataPath.vhd Line: 51
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 52 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 568 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 184 output pins
+    Info (21061): Implemented 383 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 41 warnings
+    Info: Peak virtual memory: 5242 megabytes
+    Info: Processing ended: Tue Dec 04 04:27:44 2018
+    Info: Elapsed time: 00:00:47
+    Info: Total CPU time (on all processors): 00:01:02
+
+
