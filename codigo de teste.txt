@@ -1,15 +1,10 @@
--- registrando os valores no registrador
-	  addi $s2, $s2, 5
-preenche: addi $s0, $s0, 5
-	  sw $s0, 0($s1)
-	  addi $s1, $s1, 1
-	  bne $s1, $s2, preenche
+	  0000000000001000 add $s0,$s0,$s1
+	  0000010100001001 sub $s2,$s4,$s1
+	  0000011010001010 mult $s3,$s2,$s1
+	  0000101100110011 and $s5,$s4,$6
+	  0000101100110100 or $s5,$s4,$6
+	  0001100000000001 lw $s0,1($s4); 
 	  
-	  sub $s1, $s1, $s1
-	  addi $s3, $s3, 15
-iteracao: lw $s0, 0($s1)
-	  beq $s0, $s3, saida
-	  addi $s1, $s1, 1
-	  bne $s1, $s2, iteracao
-saida:    
+	  
+	  
 	  
